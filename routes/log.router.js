@@ -20,4 +20,5 @@ routerAuth.post("/log", async (req, res) => {
     res.redirect("/");
   } else res.rendeComponemt(Login, {});
 });
+
 module.exports = routerAuth;
