@@ -38,3 +38,5 @@ router.route('/reg')
       }
     }
   });
+
+module.exports = router;
