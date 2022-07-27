@@ -2,7 +2,8 @@ const React = require('react');
 
 module.exports = function Item({ drug }) {
   return (
-    <div className="card" style="width: 18rem;">
+
+    <div className="card" style={{ width: '18rem' }}>
       <img src={`${drug.picture}`} className="card-img-top" alt="Здесь должна быть фоторафия лекарства" />
       <div className="card-body">
         <h5 className="card-title">{drug.title}</h5>

@@ -1,11 +1,10 @@
 const React = require('react');
 const Layout = require('./Layout');
-const { Item } = require('./Item');
+const Item = require('./Item');
 
 module.exports = function Home({ arrDrugs }) {
   return (
     <Layout>
-
       <section className="itemWeek">
         <h1>Товары недели</h1>
         {arrDrugs.map((el) => <Item drug={el} />)}
