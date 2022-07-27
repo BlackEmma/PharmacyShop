@@ -16,7 +16,7 @@ router.route('/cart')
       // вытаcкиваем из бд все записи о лекарствах в корзине конкретного пользователя
       // (по id текущего пользователя)
 
-      res.renderComponent(Drug, { arrDrugs });
+      res.renderComponent(CartList, { arrDrugs });
     } catch (err) {
       res.status(500).send('Ошибка получения данных о корзине');
     }
