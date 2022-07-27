@@ -7,6 +7,7 @@ const saltRounds = 10;
 
 router.route('/reg')
   .get((req, res) => {
+    // по get-запросу отдаем отрендеренную формочку для регистрации
     res.renderComponent(Registration, {});
   })
 
@@ -15,7 +16,7 @@ router.route('/reg')
     const { name, email, password } = req.body;
 
     // пытаемся найти пользователя в базе данных
-    const userFromDb = await User.findOne({ where: { email }});
+    const userFromDb = await User.findOne({ where: { email } });
 
     if (userFromDb) {
       // если мы нашли пользователя с таким email в бд, то посылаем сообщение об ошибке
@@ -29,7 +30,7 @@ router.route('/reg')
         await user.save();
 
         // добавляем user в новую сессию, чтобы после регистрации пользователь сразу был залогинен
-        req.session.user = user;
+        req.session.userId = user.id;
         // после успешной регистрации посылаем статус 201(создано) и редиректим на главную
         res.status(201).redirect('/');
       } catch (err) {
