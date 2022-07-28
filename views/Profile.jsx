@@ -27,7 +27,7 @@ module.exports = function Profile({ userId, user }) {
             Телефон:
             {user.phone ? user.phone : 'Телефон не указан'}
           </p>
-          <a href="/profile/:id/edit" className="btn btn-primary">Изменить профиль</a>
+          <a href={`/profile/${userId}/edit`} className="btn btn-primary">Изменить профиль</a>
         </div>
       </div>
     </Layout>
