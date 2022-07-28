@@ -7,15 +7,13 @@ module.exports = function CartList({ arrDrugs }) {
       <table className="table">
         <thead>
           <tr>
-            <th> </th>
-            <th>  </th>
-            <th scope="col">{`Итого:${arrDrugs.reduce((acc, drug) => acc + drug.priceOff)}`}</th>
-          </tr>
-        </thead>
-        <thead>
-          <tr>
             <th scope="col">Название</th>
-            <th>  </th>
+            <th>{'   '}</th>
+            <th>{'   '}</th>
+            <th>{'   '}</th>
+            <th>{'   '}</th>
+            <th>{'   '}</th>
+            <th>{'   '}</th>
             <th scope="col">Цена</th>
           </tr>
         </thead>
@@ -23,10 +21,33 @@ module.exports = function CartList({ arrDrugs }) {
           {arrDrugs.map((drug) => (
             <tr key={drug.id}>
               <td>{drug.title}</td>
-              <td />
+              <td>{'   '}</td>
+              <td>{'   '}</td>
+              <td>{'   '}</td>
+              <td>{'   '}</td>
+              <td>{'   '}</td>
+              <td>{'   '}</td>
               <td>{drug.priceOff}</td>
             </tr>
           ))}
+        </tbody>
+        <tbody>
+          <tr>
+            <th>{'   '}</th>
+            <th>{'   '}</th>
+            <th>{'   '}</th>
+            <th>{'   '}</th>
+            <th>{'   '}</th>
+            <th>{'   '}</th>
+            <th>{'   '}</th>
+            <th scope="col">
+              {`Итого: ${arrDrugs.reduce(
+                (acc, drug) => acc + drug.priceOff,
+                0,
+              )}`}
+
+            </th>
+          </tr>
         </tbody>
       </table>
     </Layout>
