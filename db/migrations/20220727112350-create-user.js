@@ -17,12 +17,15 @@ module.exports = {
         type: Sequelize.TEXT,
       },
       birthday: {
+        allowNull: true,
         type: Sequelize.TEXT,
       },
       city: {
+        allowNull: true,
         type: Sequelize.TEXT,
       },
       phone: {
+        allowNull: true,
         type: Sequelize.TEXT,
       },
       createdAt: {
