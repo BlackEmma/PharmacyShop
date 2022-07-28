@@ -16,6 +16,15 @@ module.exports = {
       password: {
         type: Sequelize.TEXT,
       },
+      birthday: {
+        type: Sequelize.TEXT,
+      },
+      city: {
+        type: Sequelize.TEXT,
+      },
+      phone: {
+        type: Sequelize.TEXT,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,

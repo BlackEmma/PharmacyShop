@@ -21,11 +21,11 @@ module.exports = function Profile({ userId, user }) {
           </p>
           <p className="card-text">
             Город:
-            {user.city}
+            {user.city ? user.city : 'Город не указан'}
           </p>
           <p className="card-text">
             Телефон:
-            {user.phone}
+            {user.phone ? user.phone : 'Телефон не указан'}
           </p>
           <a href="/profile/:id/edit" className="btn btn-primary">Изменить профиль</a>
         </div>
