@@ -33,10 +33,13 @@ router.route('/reg')
         req.session.userId = user.id;
         // после успешной регистрации посылаем статус 201(создано) и редиректим на главную
         res.status(201).redirect('/');
+
       } catch (err) {
         res.status(500).send('Ошибка регистрации');
       }
     }
-  });
+
+  })
+  
 
 module.exports = router;
