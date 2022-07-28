@@ -19,7 +19,8 @@ router.route('/cart')
         res.send('Корзина пуста');
         return;
       }
-      res.renderComponent(CartList, { arrDrugs });
+      const { userId } = req.session;
+      res.renderComponent(CartList, { arrDrugs, userId });
     } catch (err) {
       res.status(500).send(err.message);
     }

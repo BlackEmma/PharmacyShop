@@ -1,10 +1,10 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function CartList({ arrDrugs }) {
+module.exports = function CartList({ arrDrugs, userId }) {
   return (
-    <Layout>
-      <table className="table">
+    <Layout userId={userId}>
+      <table className="table table-success table-striped">
         <thead>
           <tr>
             <th scope="col">Название</th>
