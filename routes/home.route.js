@@ -5,7 +5,8 @@ const { Drug } = require('../db/models');
 router.route('/')
   .get(async (req, res) => {
     const arrDrugs = await Drug.findAll();
-    res.renderComponent(Home, { arrDrugs });
+    const { userId } = req.session;
+    res.renderComponent(Home, { arrDrugs, userId });
   });
 
 module.exports = router;

@@ -15,9 +15,14 @@ router.route('/cart')
       });
       // вытаcкиваем из бд все записи о лекарствах в корзине конкретного пользователя
       // (по id текущего пользователя)
-
+      if (arrDrugs.length === 0) {
+        res.send('Корзина пуста');
+        return;
+      }
       res.renderComponent(CartList, { arrDrugs });
     } catch (err) {
-      res.status(500).send('Ошибка получения данных о корзине');
+      res.status(500).send(err.message);
     }
   });
+
+module.exports = router;

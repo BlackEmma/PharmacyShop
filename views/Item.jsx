@@ -1,9 +1,9 @@
 const React = require('react');
 
-module.exports = function Item({ drug, user }) {
+module.exports = function Item({ drug, userId }) {
   return (
     <section>
-      {user ? (
+      {userId ? (
         <div className="card" style={{ width: '18rem' }}>
           <img src={`${drug.picture}`} className="card-img-top" alt="Здесь должна быть фоторафия лекарства" />
           <div className="card-body">

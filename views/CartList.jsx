@@ -1,7 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function Home({ arrDrugs }) {
+module.exports = function CartList({ arrDrugs }) {
   return (
     <Layout>
       <table className="table">
@@ -21,7 +21,7 @@ module.exports = function Home({ arrDrugs }) {
         </thead>
         <tbody>
           {arrDrugs.map((drug) => (
-            <tr>
+            <tr key={drug.id}>
               <td>{drug.title}</td>
               <td />
               <td>{drug.priceOff}</td>
