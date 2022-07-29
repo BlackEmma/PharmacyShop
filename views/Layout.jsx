@@ -24,7 +24,7 @@ module.exports = function Layout({ children, userId }) {
                     <a className="nav-link active" aria-current="page" href={`/profile/${userId}`}>Личный кабинет</a>
                   </li>
                   <li className="nav-item">
-                    <a className="nav-link" href="/">Выход</a>
+                    <a className="nav-link" href="/logout">Выход</a>
                   </li>
                 </ul>
                 <button type="button" className="btn btn-primary position-relative">
