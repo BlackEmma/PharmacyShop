@@ -1,13 +1,13 @@
 const React = require('react');
 
-module.exports = function Layout({ children }) {
+module.exports = function Layout({ children, count }) {
   return (
     <html lang="en">
       <head>
         <meta charset="UTF-8" />
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
         <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" />
-        <script defer src='/js/application.js'></script>
+        <script defer src="/js/application.js" />
         <title>Аптека</title>
       </head>
       <body>
@@ -28,9 +28,8 @@ module.exports = function Layout({ children }) {
               </ul>
               <button type="button" className="btn btn-primary position-relative">
                 Козина
-                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                  99+
-                  <span className="visually-hidden">unread ХЗ ЧЕ ЭТО messages</span>
+                <span id="span-count" className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                  {count}
                 </span>
               </button>
             </div>

@@ -2,9 +2,9 @@ const React = require("react");
 const Layout = require("./Layout");
 const Item = require("./Item");
 
-module.exports = function Home({ arrDrugs }) {
+module.exports = function Home({ arrDrugs, count }) {
   return (
-    <Layout>
+    <Layout count={count}>
       <div className="container">
         <section className="itemWeek">
           <h1>Товары недели</h1>
