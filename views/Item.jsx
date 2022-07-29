@@ -1,7 +1,8 @@
-const React = require('react');
+const React = require("react");
 
 module.exports = function Item({ drug, userId }) {
   return (
+
     <section>
       {userId ? (
         <div className="card" style={{ width: '18rem' }}>
@@ -11,7 +12,9 @@ module.exports = function Item({ drug, userId }) {
             <p className="card-text">{drug.description}</p>
             <p className="card-text">Цена: {drug.currentPrice} руб.</p>
             <p className="card-text">Цена по карте: {drug.priceOff} руб.</p>
-            <a href="#" className="btn btn-primary">Купить</a>
+               <button id={`${drug.id}`} className="btn btn-primary buy">
+          Купить
+        </button>
           </div>
         </div>
       ) : (
@@ -22,7 +25,9 @@ module.exports = function Item({ drug, userId }) {
             <p className="card-text">{drug.description}</p>
             <p className="card-text">Цена: {drug.currentPrice} руб.</p>
             <p className="card-text">Цена по карте: {drug.priceOff} руб.</p>
-            <a href="/log" className="btn btn-primary">Купить</a>
+              <button id={`${drug.id}`} className="btn btn-primary buy">
+          Купить
+        </button>
           </div>
         </div>
       )}
