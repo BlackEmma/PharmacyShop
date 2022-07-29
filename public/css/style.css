@@ -47,7 +47,7 @@
 
 .card{
     width: 14rem !important; 
-    height: 23rem !important;
+    min-height: 23rem !important;
     margin-top: 3rem;
     margin-bottom: 3rem;
 }
@@ -98,4 +98,5 @@ table {
 #table{
     margin: 5rem;
     border: solid 5px white; 
+    border-radius: 15px;
 }
