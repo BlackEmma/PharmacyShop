@@ -16,6 +16,18 @@ module.exports = {
       password: {
         type: Sequelize.TEXT,
       },
+      birthday: {
+        allowNull: true,
+        type: Sequelize.TEXT,
+      },
+      city: {
+        allowNull: true,
+        type: Sequelize.TEXT,
+      },
+      phone: {
+        allowNull: true,
+        type: Sequelize.TEXT,
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
