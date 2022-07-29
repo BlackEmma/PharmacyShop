@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const Home = require('../views/Home');
+// подключение моделей бд Drug и Cart
 const { Drug, Cart } = require('../db/models');
 
 router.route('/')
