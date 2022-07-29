@@ -26,11 +26,11 @@ router.route('/')
     // в ином случае (если пользователь залогинен и код не зашел в верхний if) пробуем выполнить...
     try {
       // достаем id лекарства из тела запроса
-      const { drugId } = req.body;
+      const { drugId, free } = req.body;
       // достаем id текущего пользователя из сессии
       const { userId } = req.session;
       // ждем записи в бд в таблицу корзины
-      await Cart.create({ userId: Number(userId), drugId: Number(drugId) });
+      await Cart.create({ userId: Number(userId), drugId: Number(drugId), free });
       // отправляем json-ответ с объектом, в который кладем счетчик, равный 1
       // так как мы записали в бд 1 лекарство
       res.json({ count: 1 });
