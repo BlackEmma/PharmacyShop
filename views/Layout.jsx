@@ -15,7 +15,9 @@ module.exports = function Layout({ children, userId }) {
           <nav className="navbar navbar-expand-lg bg-light">
             <div className="container-fluid">
               <a className="navbar-brand" href="/">Аптека</a>
-              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation" />
+              <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span className="navbar-toggler-icon" />
+              </button>
               <div className="collapse navbar-collapse" id="navbarText">
                 <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                   <li className="nav-item">
