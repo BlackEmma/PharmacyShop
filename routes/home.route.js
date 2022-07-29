@@ -9,7 +9,6 @@ router.route('/')
     // вытаскиваем из бд все лекарства
     const arrDrugs = await Drug.findAll();
     const { userId } = req.session;
-
     // создаем счетчик для корзины, равный 0
     const count = 0;
     // рендерим и отдаем страничку (через использование нашей миддлеварки)
@@ -40,7 +39,6 @@ router.route('/')
       // и отправляем статус 500 и фразу об ошибке записи в бд
       res.status(500).end(`ошибка записи в бд:\n${err.message}`);
     }
-});
-
+  });
 
 module.exports = router;
