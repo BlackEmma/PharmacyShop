@@ -100,3 +100,8 @@ table {
     border: solid 5px white; 
     border-radius: 15px;
 }
+
+#logo{
+    max-width: 70px;
+    margin-right: 10px;
+}
