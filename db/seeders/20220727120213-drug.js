@@ -48,6 +48,30 @@ module.exports = {
       priceOff: 35.99,
       createdAt: new Date(),
       updatedAt: new Date(),
+    }, {
+      picture: 'img/spazmalgon.jpg',
+      title: 'Спазмалгон',
+      description: 'Препараты для лечения боли и спазмов',
+      currentPrice: 269,
+      priceOff: 229.99,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    }, {
+      picture: 'img/ketonal.jpg',
+      title: 'Кетонал',
+      description: 'Средства от боли и воспалений',
+      currentPrice: 575,
+      priceOff: 489.99,
+      createdAt: new Date(),
+      updatedAt: new Date(),
+    }, {
+      picture: 'img/met.jpg',
+      title: 'Метфорвел',
+      description: 'Препараты, повышающие чувствительность клеток к инсулину',
+      currentPrice: 56,
+      priceOff: 49.99,
+      createdAt: new Date(),
+      updatedAt: new Date(),
     }]);
   },
   async down(queryInterface) {
