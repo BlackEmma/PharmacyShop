@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
     },
     userId: {
-      allowNull: true,
+      allowNull: false,
       primaryKey: true,
       type: DataTypes.INTEGER,
       references: {
@@ -32,13 +32,17 @@ module.exports = (sequelize, DataTypes) => {
       },
     },
     drugId: {
-      allowNull: true,
+      allowNull: false,
       primaryKey: true,
       type: DataTypes.INTEGER,
       references: {
         model: 'Drugs',
         key: 'id',
       },
+    },
+    free: {
+      allowNull: false,
+      type: DataTypes.BOOLEAN,
     },
     createdAt: {
       allowNull: false,
