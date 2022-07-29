@@ -9,8 +9,8 @@ module.exports = function Item({ drug, userId }) {
           <div className="card-body">
             <h5 className="card-title">{drug.title}</h5>
             <p className="card-text">{drug.description}</p>
-            <p className="card-text">{drug.currentPrice}</p>
-            <p className="card-text">{drug.priceOff}</p>
+            <p className="card-text">Цена: {drug.currentPrice} руб.</p>
+            <p className="card-text">Цена по карте: {drug.priceOff} руб.</p>
             <a href="#" className="btn btn-primary">Купить</a>
           </div>
         </div>
@@ -20,8 +20,8 @@ module.exports = function Item({ drug, userId }) {
           <div className="card-body">
             <h5 className="card-title">{drug.title}</h5>
             <p className="card-text">{drug.description}</p>
-            <p className="card-text">{drug.currentPrice}</p>
-            <p className="card-text">{drug.priceOff}</p>
+            <p className="card-text">Цена: {drug.currentPrice} руб.</p>
+            <p className="card-text">Цена по карте: {drug.priceOff} руб.</p>
             <a href="/log" className="btn btn-primary">Купить</a>
           </div>
         </div>
