@@ -1,6 +1,5 @@
-require("@babel/register");
-const routerAuth = require("express").Router();
-const bcrypt = require("bcrypt");
+const routerAuth = require('express').Router();
+const bcrypt = require('bcrypt');
 
 const { User } = require("../db/models");
 const Login = require("../views/Login"); // изменить на компонент логирования;

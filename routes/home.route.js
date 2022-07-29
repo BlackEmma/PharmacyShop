@@ -8,10 +8,12 @@ router.route('/')
   .get(async (req, res) => {
     // вытаскиваем из бд все лекарства
     const arrDrugs = await Drug.findAll();
+    const { userId } = req.session;
+
     // создаем счетчик для корзины, равный 0
     const count = 0;
     // рендерим и отдаем страничку (через использование нашей миддлеварки)
-    res.renderComponent(Home, { arrDrugs, count });
+    res.renderComponent(Home, { arrDrugs, count, userId });
   })
 
   // обработчик post-запросов для домашней страницы
@@ -39,5 +41,6 @@ router.route('/')
       res.status(500).end(`ошибка записи в бд:\n${err.message}`);
     }
 });
+
 
 module.exports = router;
