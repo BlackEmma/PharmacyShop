@@ -1,4 +1,27 @@
 #cartBtn {
-    text-decoration: none, white;
+    text-decoration: none !important;
+    color: white;
+    font-size: x-large;
     
+}
+
+.navbar {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1;
+    height: 6em;
+    border-bottom-right-radius:  1em;
+    border-bottom-left-radius: 1em;
+    margin: 0px 30px ;
+    padding: 0px 15px !important;
+}
+.navbar-brand{
+    font-size: xx-large !important;
+}
+.nav-link {
+    font-size: x-large !important;
+}
+
+#span-count{
+    font-size: medium !important;
 }
