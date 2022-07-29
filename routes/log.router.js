@@ -1,4 +1,3 @@
-require('@babel/register');
 const routerAuth = require('express').Router();
 const bcrypt = require('bcrypt');
 
