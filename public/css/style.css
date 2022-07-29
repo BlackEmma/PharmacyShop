@@ -99,3 +99,8 @@ table {
     margin: 5rem;
     border: solid 5px white; 
 }
+
+#logo{
+    max-width: 70px;
+    margin-right: 10px;
+}
