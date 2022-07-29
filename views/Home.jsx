@@ -7,12 +7,15 @@ module.exports = function Home({ arrDrugs, count, userId }) {
   return (
     <Layout userId={userId} count={count}>
       <div className="container">
+      <h3>Товары недели</h3>
         <section className="itemWeek">
-          <h3>Товары недели</h3>
-          {arrDrugs.map((el) => <FreeItem key={el.id} drug={el} />)}
+          
+          {arrDrugs.slice(0, 3).map((el) => <FreeItem key={el.id} drug={el} />)}
         </section>
+
+
+        <h3>Все лекарства</h3>
         <section className="itemList">
-          <h3>Лекарства в наличии</h3>
           {arrDrugs.map((el) => <Item key={el.id} drug={el} />)}
         </section>
       </div>
