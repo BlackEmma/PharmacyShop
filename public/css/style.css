@@ -9,19 +9,93 @@
     position: sticky !important;
     top: 0 !important;
     z-index: 1;
-    height: 6em;
+    min-height: 6em;
     border-bottom-right-radius:  1em;
     border-bottom-left-radius: 1em;
     margin: 0px 30px ;
     padding: 0px 15px !important;
+    opacity: 0.9;
 }
 .navbar-brand{
     font-size: xx-large !important;
+    opacity: 1 !important;
 }
 .nav-link {
     font-size: x-large !important;
+    opacity: 1 !important;
 }
 
 #span-count{
     font-size: medium !important;
+}
+
+.itemWeek {
+    display:flex;
+    justify-content: space-evenly;
+    background-color: rgba(227, 255, 248, 0.9);
+    border-radius: 15px;
+
+}
+
+.itemList{
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    background-color: rgba(227, 255, 248, 0.9);
+    border-radius: 15px;
+}
+
+.card{
+    width: 14rem !important; 
+    height: 23rem !important;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.card-img-top{
+    margin: auto;
+    max-width: 12rem !important;
+    max-height: 8rem !important;
+}
+
+h3{
+    margin-top: 4rem !important;
+}
+
+body{
+    background-image: url('../img/1625277141_15-kartinkin-com-p-lekarstva-fon-krasivie-foni-15.jpg');
+   
+}
+
+form{
+    background-color: rgba(227, 255, 248, 0.9);
+    border-radius: 15px;
+    margin: 8rem;
+    padding: 4rem 6rem;
+}
+
+legend{
+    margin-bottom: 2rem !important;
+}
+
+#profile{
+    margin: 8rem auto; 
+    opacity: 0.8;
+    width: 25rem !important;
+    height: 30rem !important;
+    align-items: center;
+    border-radius: 15px;
+}
+
+#avatar{
+    max-height: 12rem !important;
+}
+
+table {
+    margin: 0% !important;
+}
+
+#table{
+    margin: 5rem;
+    border: solid 5px white; 
 }

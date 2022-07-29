@@ -8,7 +8,7 @@ module.exports = {
         type: Sequelize.INTEGER,
       },
       userId: {
-        allowNull: true,
+        allowNull: false,
         primaryKey: true,
         type: Sequelize.INTEGER,
         references: {
@@ -17,13 +17,17 @@ module.exports = {
         },
       },
       drugId: {
-        allowNull: true,
+        allowNull: false,
         primaryKey: true,
         type: Sequelize.INTEGER,
         references: {
           model: 'Drugs',
           key: 'id',
         },
+      },
+      free: {
+        allowNull: false,
+        type: Sequelize.BOOLEAN,
       },
       createdAt: {
         allowNull: false,
