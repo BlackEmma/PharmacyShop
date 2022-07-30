@@ -3,7 +3,6 @@ const Layout = require('./Layout');
 
 module.exports = function CartList({ arrDrugs, userId }) {
   return (
-
     <Layout userId={userId}>
       <section id="table">
         <table className="table table-success table-striped">
@@ -53,6 +52,7 @@ module.exports = function CartList({ arrDrugs, userId }) {
           </tbody>
         </table>
       </section>
+      <button id='postbtn' type="button" className="btn btn-secondary">Оформить заказ</button>
     </Layout>
   );
 };

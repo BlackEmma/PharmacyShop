@@ -6,7 +6,7 @@ const logRouter = require('./routes/log.router');
 const regRouter = require('./routes/reg.route');
 const profileRouter = require('./routes/profile.route');
 const profileEditRouter = require('./routes/profileEdit.route');
-const logoutRouter = require('./routes/logout.route')
+const logoutRouter = require('./routes/logout.route');
 
 const app = express();
 
@@ -22,8 +22,7 @@ app.use('/', logRouter);
 app.use('/', regRouter);
 app.use('/', profileRouter);
 app.use('/', profileEditRouter);
-app.use('/', logoutRouter); 
-
+app.use('/', logoutRouter);
 
 app.listen(PORT, () => {
   console.log('Uraaaa!!! My podkluchilis');
