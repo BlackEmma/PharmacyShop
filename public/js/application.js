@@ -1,6 +1,7 @@
 const container = document.querySelector('.container');
 // отлавливаем счетчик на корзине
 const cartSpanCount = document.querySelector('#span-count');
+const postBtn = document.querySelector('#postbtn');
 
 if (container) {
   // навесили слушатель событий на контейнер
@@ -94,3 +95,7 @@ if (form) {
     await response.text();
   });
 }
+
+postBtn.addEventListener('click', (event) => {
+  alert('Данные о вашем заказе отправленны Вам на почту');
+});
