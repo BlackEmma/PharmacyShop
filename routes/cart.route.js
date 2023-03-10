@@ -24,4 +24,3 @@ router.route('/cart')
   });
 
 module.exports = router;
-
